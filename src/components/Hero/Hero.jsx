@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.css";
 import { HiLocationMarker } from "react-icons/hi";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -11,11 +12,11 @@ export default function Hero() {
         <div className="flexColStart hero-left">
           <div className="hero-title">
             <div className="orange-circle" />
-            <h1>
+            <motion.h1 initial={}>
               Discover <br />
               Most Suitable <br />
               Property
-            </h1>
+            </motion.h1>
           </div>
           <div className="flexColStart hero-des">
             <span className="secondaryText">

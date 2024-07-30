@@ -12,7 +12,11 @@ export default function Hero() {
         <div className="flexColStart hero-left">
           <div className="hero-title">
             <div className="orange-circle" />
-            <motion.h1 initial={}>
+            <motion.h1
+              initial={{ y: "2rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2, type: "spring" }}
+            >
               Discover <br />
               Most Suitable <br />
               Property
@@ -59,9 +63,14 @@ export default function Hero() {
 
         {/* right side */}
         <div className="flexCenter hero-right">
-          <div className="image-container">
+          <motion.div
+            initial={{ x: "7rem", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 2, type: "spring" }}
+            className="image-container"
+          >
             <img src="./hero-image.png" alt="hero" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
